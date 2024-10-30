@@ -1,0 +1,213 @@
+﻿<Global.Microsoft.VisualBasic.CompilerServices.DesignerGenerated()>
+Partial Class frm_main
+    Inherits System.Windows.Forms.Form
+
+    'Form esegue l'override del metodo Dispose per pulire l'elenco dei componenti.
+    <System.Diagnostics.DebuggerNonUserCode()>
+    Protected Overrides Sub Dispose(ByVal disposing As Boolean)
+        Try
+            If disposing AndAlso components IsNot Nothing Then
+                components.Dispose()
+            End If
+        Finally
+            MyBase.Dispose(disposing)
+        End Try
+    End Sub
+
+    'Richiesto da Progettazione Windows Form
+    Private components As System.ComponentModel.IContainer
+
+    'NOTA: la procedura che segue è richiesta da Progettazione Windows Form
+    'Può essere modificata in Progettazione Windows Form.  
+    'Non modificarla mediante l'editor del codice.
+    <System.Diagnostics.DebuggerStepThrough()>
+    Private Sub InitializeComponent()
+        Me.components = New System.ComponentModel.Container()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(frm_main))
+        Me.StatusStrip1 = New System.Windows.Forms.StatusStrip()
+        Me.cnt_status_cguard_generale = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cnt_status_general = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cnt_status_cprotect_engine = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cnt_status_cprotect_coindevice = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cnt_status_cprotect_billdevice = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.cnt_status_levelwarning = New System.Windows.Forms.ToolStripStatusLabel()
+        Me.mnu_elenco_finestre = New System.Windows.Forms.ToolStripDropDownButton()
+        Me.cnt_bgworker = New System.ComponentModel.BackgroundWorker()
+        Me.mnu_main = New System.Windows.Forms.ContextMenuStrip(Me.components)
+        Me.ToolStripSeparator1 = New System.Windows.Forms.ToolStripSeparator()
+        Me.ConfiguraInterfacciaToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.VisualizzaLogToolStripMenuItem = New System.Windows.Forms.ToolStripMenuItem()
+        Me.ToolStripSeparator2 = New System.Windows.Forms.ToolStripSeparator()
+        Me.mnu_importiaperti = New System.Windows.Forms.ToolStripMenuItem()
+        Me.cnt_timer_polling = New System.Windows.Forms.Timer(Me.components)
+        Me.EventLog1 = New System.Diagnostics.EventLog()
+        Me.DataSet1 = New System.Data.DataSet()
+        Me.StatusStrip1.SuspendLayout()
+        Me.mnu_main.SuspendLayout()
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).BeginInit()
+        Me.SuspendLayout()
+        '
+        'StatusStrip1
+        '
+        Me.StatusStrip1.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.StatusStrip1.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.cnt_status_cguard_generale, Me.cnt_status_general, Me.cnt_status_cprotect_engine, Me.cnt_status_cprotect_coindevice, Me.cnt_status_cprotect_billdevice, Me.cnt_status_levelwarning, Me.mnu_elenco_finestre})
+        Me.StatusStrip1.Location = New System.Drawing.Point(0, 822)
+        Me.StatusStrip1.Name = "StatusStrip1"
+        Me.StatusStrip1.Padding = New System.Windows.Forms.Padding(1, 0, 19, 0)
+        Me.StatusStrip1.ShowItemToolTips = True
+        Me.StatusStrip1.Size = New System.Drawing.Size(1344, 26)
+        Me.StatusStrip1.TabIndex = 1
+        Me.StatusStrip1.Text = "StatusStrip1"
+        '
+        'cnt_status_cguard_generale
+        '
+        Me.cnt_status_cguard_generale.Name = "cnt_status_cguard_generale"
+        Me.cnt_status_cguard_generale.Size = New System.Drawing.Size(92, 21)
+        Me.cnt_status_cguard_generale.Text = "in partenza..."
+        '
+        'cnt_status_general
+        '
+        Me.cnt_status_general.Name = "cnt_status_general"
+        Me.cnt_status_general.Size = New System.Drawing.Size(1118, 21)
+        Me.cnt_status_general.Spring = True
+        Me.cnt_status_general.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'cnt_status_cprotect_engine
+        '
+        Me.cnt_status_cprotect_engine.Image = Global.Cashprotect.My.Resources.Resources.bullet_ball_glass_grey
+        Me.cnt_status_cprotect_engine.ImageAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cnt_status_cprotect_engine.Name = "cnt_status_cprotect_engine"
+        Me.cnt_status_cprotect_engine.Size = New System.Drawing.Size(20, 21)
+        Me.cnt_status_cprotect_engine.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        Me.cnt_status_cprotect_engine.ToolTipText = "dispositivo engine"
+        '
+        'cnt_status_cprotect_coindevice
+        '
+        Me.cnt_status_cprotect_coindevice.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.cnt_status_cprotect_coindevice.Image = Global.Cashprotect.My.Resources.Resources.bullet_ball_glass_grey
+        Me.cnt_status_cprotect_coindevice.Name = "cnt_status_cprotect_coindevice"
+        Me.cnt_status_cprotect_coindevice.Size = New System.Drawing.Size(20, 21)
+        Me.cnt_status_cprotect_coindevice.ToolTipText = "dispositivo monete"
+        '
+        'cnt_status_cprotect_billdevice
+        '
+        Me.cnt_status_cprotect_billdevice.Image = Global.Cashprotect.My.Resources.Resources.bullet_ball_glass_grey
+        Me.cnt_status_cprotect_billdevice.Name = "cnt_status_cprotect_billdevice"
+        Me.cnt_status_cprotect_billdevice.Size = New System.Drawing.Size(20, 21)
+        Me.cnt_status_cprotect_billdevice.ToolTipText = "dispositivo banconote"
+        '
+        'cnt_status_levelwarning
+        '
+        Me.cnt_status_levelwarning.AutoToolTip = True
+        Me.cnt_status_levelwarning.Image = Global.Cashprotect.My.Resources.Resources.warning
+        Me.cnt_status_levelwarning.Name = "cnt_status_levelwarning"
+        Me.cnt_status_levelwarning.Size = New System.Drawing.Size(20, 21)
+        '
+        'mnu_elenco_finestre
+        '
+        Me.mnu_elenco_finestre.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image
+        Me.mnu_elenco_finestre.Image = CType(resources.GetObject("mnu_elenco_finestre.Image"), System.Drawing.Image)
+        Me.mnu_elenco_finestre.ImageTransparentColor = System.Drawing.Color.Magenta
+        Me.mnu_elenco_finestre.Name = "mnu_elenco_finestre"
+        Me.mnu_elenco_finestre.Size = New System.Drawing.Size(34, 24)
+        Me.mnu_elenco_finestre.Text = "ToolStripDropDownButton1"
+        '
+        'cnt_bgworker
+        '
+        Me.cnt_bgworker.WorkerReportsProgress = True
+        '
+        'mnu_main
+        '
+        Me.mnu_main.ImageScalingSize = New System.Drawing.Size(20, 20)
+        Me.mnu_main.Items.AddRange(New System.Windows.Forms.ToolStripItem() {Me.ToolStripSeparator1, Me.ConfiguraInterfacciaToolStripMenuItem, Me.VisualizzaLogToolStripMenuItem, Me.ToolStripSeparator2, Me.mnu_importiaperti})
+        Me.mnu_main.Name = "mnu_main"
+        Me.mnu_main.Size = New System.Drawing.Size(412, 152)
+        '
+        'ToolStripSeparator1
+        '
+        Me.ToolStripSeparator1.Name = "ToolStripSeparator1"
+        Me.ToolStripSeparator1.Size = New System.Drawing.Size(408, 6)
+        '
+        'ConfiguraInterfacciaToolStripMenuItem
+        '
+        Me.ConfiguraInterfacciaToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ConfiguraInterfacciaToolStripMenuItem.Name = "ConfiguraInterfacciaToolStripMenuItem"
+        Me.ConfiguraInterfacciaToolStripMenuItem.Size = New System.Drawing.Size(411, 36)
+        Me.ConfiguraInterfacciaToolStripMenuItem.Text = "&Configura interfaccia"
+        '
+        'VisualizzaLogToolStripMenuItem
+        '
+        Me.VisualizzaLogToolStripMenuItem.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.VisualizzaLogToolStripMenuItem.Name = "VisualizzaLogToolStripMenuItem"
+        Me.VisualizzaLogToolStripMenuItem.Size = New System.Drawing.Size(411, 36)
+        Me.VisualizzaLogToolStripMenuItem.Text = "&Visualizza log"
+        '
+        'ToolStripSeparator2
+        '
+        Me.ToolStripSeparator2.Name = "ToolStripSeparator2"
+        Me.ToolStripSeparator2.Size = New System.Drawing.Size(408, 6)
+        '
+        'mnu_importiaperti
+        '
+        Me.mnu_importiaperti.Font = New System.Drawing.Font("Segoe UI", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.mnu_importiaperti.Name = "mnu_importiaperti"
+        Me.mnu_importiaperti.Size = New System.Drawing.Size(411, 36)
+        Me.mnu_importiaperti.Text = "R&apporto importi non incassati"
+        '
+        'cnt_timer_polling
+        '
+        Me.cnt_timer_polling.Enabled = True
+        Me.cnt_timer_polling.Interval = 2000
+        '
+        'EventLog1
+        '
+        Me.EventLog1.SynchronizingObject = Me
+        '
+        'DataSet1
+        '
+        Me.DataSet1.DataSetName = "NewDataSet"
+        '
+        'frm_main
+        '
+        Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
+        Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
+        Me.ClientSize = New System.Drawing.Size(1344, 848)
+        Me.ContextMenuStrip = Me.mnu_main
+        Me.Controls.Add(Me.StatusStrip1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
+        Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
+        Me.IsMdiContainer = True
+        Me.Margin = New System.Windows.Forms.Padding(4, 4, 4, 4)
+        Me.MaximizeBox = False
+        Me.Name = "frm_main"
+        Me.Text = "Cashprotect - farmaconsult"
+        Me.StatusStrip1.ResumeLayout(False)
+        Me.StatusStrip1.PerformLayout()
+        Me.mnu_main.ResumeLayout(False)
+        CType(Me.EventLog1, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.DataSet1, System.ComponentModel.ISupportInitialize).EndInit()
+        Me.ResumeLayout(False)
+        Me.PerformLayout()
+
+    End Sub
+
+    Friend WithEvents StatusStrip1 As StatusStrip
+    Friend WithEvents cnt_status_cguard_generale As ToolStripStatusLabel
+    Friend WithEvents cnt_bgworker As System.ComponentModel.BackgroundWorker
+    Friend WithEvents cnt_status_cprotect_engine As ToolStripStatusLabel
+    Friend WithEvents mnu_main As ContextMenuStrip
+    Friend WithEvents cnt_timer_polling As Timer
+    Friend WithEvents mnu_elenco_finestre As ToolStripDropDownButton
+    Friend WithEvents ToolStripSeparator1 As ToolStripSeparator
+    Friend WithEvents ConfiguraInterfacciaToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents EventLog1 As EventLog
+    Friend WithEvents VisualizzaLogToolStripMenuItem As ToolStripMenuItem
+    Friend WithEvents ToolStripSeparator2 As ToolStripSeparator
+    Friend WithEvents mnu_importiaperti As ToolStripMenuItem
+    Friend WithEvents DataSet1 As DataSet
+    Friend WithEvents cnt_status_cprotect_coindevice As ToolStripStatusLabel
+    Friend WithEvents cnt_status_cprotect_billdevice As ToolStripStatusLabel
+    Friend WithEvents cnt_status_general As ToolStripStatusLabel
+    Friend WithEvents cnt_status_levelwarning As ToolStripStatusLabel
+End Class

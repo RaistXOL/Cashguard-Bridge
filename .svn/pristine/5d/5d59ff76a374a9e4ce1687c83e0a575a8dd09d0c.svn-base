@@ -1,0 +1,32 @@
+﻿Imports System.IO
+
+Public Class frm_logviewer
+    Private Sub frm_logviewer_Load(sender As Object, e As EventArgs) Handles MyBase.Load
+
+        'cnt_logtext.Text = File.ReadAllText(Me.Tag)
+
+        Dim ofileStream As FileStream = New FileStream(Me.Tag, FileMode.Open, FileAccess.Read, FileShare.ReadWrite)
+        Dim oStreamReader As New StreamReader(ofileStream)
+
+        cnt_logtext.Text = oStreamReader.ReadToEnd
+
+        'cnt_logtext.SelectionStart = Len(cnt_logtext.Text)
+        'cnt_logtext.Select(cnt_logtext.Text.Length, 0)
+        'cnt_logtext.ScrollToCaret()
+        'Call cnt_logtext_Click(sender, e)
+    End Sub
+
+    Private Sub cnt_logtext_TextChanged(sender As Object, e As EventArgs) Handles cnt_logtext.TextChanged
+        'cnt_logtext.SelectionStart = cnt_logtext.Text.Length
+        'cnt_logtext.ScrollToCaret()
+        'cnt_logtext.Refresh()
+        'cnt_logtext.Select(cnt_logtext.Text.Length, 0)
+        'cnt_logtext.ScrollToCaret()
+        'Call cnt_logtext_Click(sender, e)
+    End Sub
+
+    Private Sub cnt_logtext_Click(sender As Object, e As EventArgs) Handles cnt_logtext.Click
+        cnt_logtext.SelectionStart = cnt_logtext.Text.Length
+        cnt_logtext.ScrollToCaret()
+    End Sub
+End Class
